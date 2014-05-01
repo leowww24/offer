@@ -46,7 +46,7 @@ int main()
 {
 	int m=4,n=4;
 	int a[m][n];
-	ifstream cin("findNumInMatrix.txt");
+	ifstream cin("3_findNumInMatrix.txt");
 	for(int i=0;i<m;++i)
 		for(int j=0;j<n;++j)
 		{
