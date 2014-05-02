@@ -83,6 +83,14 @@ void printList(Node* head)
 	}while(head!=NULL);
 }
 
+//反向打印链表，递归实现，用栈模拟递归可增强代码的鲁棒性(避免递归栈溢出)
+void reversePrint(Node* head)
+{
+	if(head==NULL)
+		return;
+	reversePrint(head->next);
+	cout<<head->val<<" ";
+}
 int main()
 {
 	Node* head=NULL;
@@ -92,6 +100,13 @@ int main()
 	addToTail(&head,5);
 	addToTail(&head,7);
 	addToTail(&head,2);
+
+	printList(head);
+	cout<<endl;
+
+	reversePrint(head);
+	cout<<endl;
+
 	removeNode(&head,2);
 	printList(head);
 
